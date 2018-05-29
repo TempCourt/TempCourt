@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>TempCourt: The Temporal Annotation of Court Decisions</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+<h1>TempCourt: Temporal Annotated Corpus of Court Decisions</h1>
+<p><small><font color="black">TempCourt is a corpus of composed of legal judgments from the European Court of Human Rights (ECHR), the European Court of Justice (ECJ) and the United States Supreme Court (USC). It is annotated following the TimeML standard and with specific considerations for the legal domain. </font></small></p>
+</div>
+
+<h2>Annotation</h2>
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+  <h4>TimeML and the legal domain</h4>
+  </div>
+  <div class="panel-body">
+  
+  <p>
+  While exploring how to do temporal annotation in the legal domain, we found out that most temporal expressions were not actually relevant or supported by the temporal annotation standard TimeML. We decided therefore to do create two different annotation sets:
+  <ul style="list-style-type:disc">
+  <li>StandardTimeML - In this Annotation Set we followed the TimeML guidelines, annotating all the Temporal Expressions we found.</li>
+  <li>LegalTimeML - In this Annotation Set we avoid some annotations, such as for instance mentions to years when citing legal articles. Even when they are temporal references, they are not temporal references <i>in the text</i>. More information on the criteria and the guidelines followed can be found in a future publication.</li>
+</ul>
+We also provide within the corpus the Annotation Sets with the output of ten state-of-the-art taggers, so comparison is straight forward if using the GATE. Also TimeML documents with the two manually generated Annotation Sets are provided.
+  </div>
+</div>
+
+<h2>Dataset</h2>
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+  <h4>Corpus download</h4>
+  </div>
+  <div class="panel-body">
+  
+  <p><b>Annotated Corpus</b>
+  The corpus contains 30 court decisions (10 per source) from the European Court of Human Rights (ECHR), the European Court of Justice (ECJ) and the United States Supreme Court (USC) annotated following the <a href="https://catalog.ldc.upenn.edu/docs/LDC2006T08/timeml_annguide_1.2.1.pdf">TimeML Guidelines</a> (TIMEX3). In the corpus you will find:
+  <ul style="list-style-type:circle">
+  <li>GATE XML documents: Containing for each court the two sets of manual annotations and ten of state-of-the-art temporal taggers output:
+  <ul style="list-style-type:disc">
+  <li>StandardTimeML - Manual annotations following the TimeML guidelines.</li>
+  <li>LegalTimeML - Annotations adapted to the legal domain following the TimeML schema but with dedicated guidelines.</li>
+    <li>HeidelTime: the output of <a href="https://github.com/HeidelTime/heideltime">HeidelTime</a>.</li>
+    <li>SUTime - the output of <a href="https://nlp.stanford.edu/software/sutime.html">SUTime</a></li>
+    <li>GUTime - the output of GUTime as part of the <a href="http://www.timeml.org/tarsqi/toolkit/index.html">TARSQI toolkit</a></li>
+    <li>CAEVO - the output of <a href="https://www.usna.edu/Users/cs/nchamber/caevo/">CAEVO</a> </li>
+    <li>ClearTK-TimeML - the output of <a href="https://cleartk.github.io/cleartk/docs/module/cleartk_timeml.html">ClearTK-TimeML</a> as part of the <a href="https://github.com/ClearTK/cleartk">ClearTK framework</a> </li>
+    <li>UWTime - the output of <a href="https://lil.cs.washington.edu/uwtime/">UWTime</a> </li>
+    <li>TIPSEM - the output of <a href="https://github.com/hllorens/otip">TIPSEM</a> </li>
+    <li>TERNIP - the output of <a href="https://github.com/cnorthwood/ternip">TERNIP</a> </li>
+    <li>USFD2 - the output of <a href="https://code.google.com/archive/p/usfd2/">USFD2</a> (slightly modified to generate TIMEX3 tags).</li>
+    <li>SYNTIME - the output of <a href="https://github.com/xszhong/syntime">SYNTIME</a> </li>
+</ul>
+  <li>StandardTimeML - TimeML documents with StandardTimeML set annotations: The .tml documents for each court in the official TimeML XML format.</li>
+  <li>LegalTimeML - TimeML documents with LegalTimeML set annotations: The .tml documents for each court in the official TimeML XML format</li>
+  <li>PlainTimeML - The original documents in TimeML format but without any tags (intended for test purposes).</li>   
+</ul>
+  
+</ul> 
+ <center><input type="button" class="btn btn-info" value="Download Annotated Corpus" onclick="location.href = 'TempCourt_annotatedcorpus.zip';"></center>
+ &nbsp
+ <p><b>Original Plain Corpus</b>
+  The corpus contains 30 court decisions (10 per source, as TXT) from the European Court of Human Rights (ECHR), the European Court of Justice (ECJ) and the United States Supreme Court (USC).
+ <center><input type="button" class="btn btn-info" value="Download Original Plain Corpus" onclick="location.href = 'TempCourt_originalcorpus.zip';"></center>
+ <!--&nbsp
+ <p><b>GitHub</b>
+  To see the pipeline and code used for the temporal tagging, please visit the following <a href="">GitHub repository</a>.
+ -->
+ 
+  </div>
+</div>
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+  <h4>Authorship</h4>
+  </div>
+  <div class="panel-body">
+    <p>This work has been submitted to a Double-blind peer review process, so no names are provided. Corpora are freely downloadable under a <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" rel="license">GNU General Public License v3.0</a> license.</p>
+	
+	If you plan to publish a work using this resource please refer to this webpage (and come back in a few months, hopefully we will have a paper to refer to!)
+	
+  </div>
+</div>
+
+
+
+<footer><hr>
+<small>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108052712-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108052712-2');
+</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  }
+})});
+</script>
+
+</footer>
+</div>
+</body>
+</html>
